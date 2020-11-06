@@ -1,0 +1,20 @@
+<h4 (click)="back()" style="color: white; cursor: pointer;">&#8249; BACK</h4>
+<div class="backdrop">
+    <div>
+        <h1 *ngIf="movie" class="movie_title">{{movie.title}}</h1>
+        <p *ngIf="movie">Vote average <span>{{movie.vote_average}}</span> | Release date <span>{{movie.release_date}}</span></p>
+    </div>
+    <img src="https://image.tmdb.org/t/p/original/{{movie.backdrop_path}}" style="width:100%;" alt="">
+</div>
+<div class="section">
+    <div class="card">
+        <h1>Overview</h1>
+        <p *ngIf="movie">{{movie.overview}}</p>
+    </div>
+
+    <div class="card">
+        <h1>{{movie.tagline}}</h1>
+        <p>Popularity: {{movie.popularity}}</p>
+        <p [class.released]="movie.status == 'Released'">{{movie.status}}</p>
+    </div>
+</div>

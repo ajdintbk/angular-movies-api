@@ -1,0 +1,84 @@
+.backdrop{
+    margin-top: 20px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 7px 39px -10px rgb(0, 0, 0);
+    position: relative;
+}
+.backdrop p{
+    padding: 20px;
+    color: rgb(216, 216, 216);
+}
+
+.backdrop span{
+    color: white;
+}
+.movie_title{
+    color: white;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0px 0px 20px;
+}
+
+.backdrop div{
+    width: 100%;
+    z-index: 20;
+    position: absolute;
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.section{
+    margin-top: 20px;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+.card{
+    background: linear-gradient(180deg, rgba(40,65,74,1) 0%, rgba(24,38,55,1) 100%);
+    width: 45%;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.5;
+    height: max-content;
+    box-shadow: 0px 7px 39px -10px rgb(0, 0, 0);
+}
+
+.released{
+    background-color: green;
+    padding: 5px 20px;
+    border-radius: 30px;
+    width: max-content;
+}
+
+@media only screen and (max-width: 600px) {
+    .backdrop{
+        margin-top: 20px;
+        height: max-content;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0px 7px 39px -10px rgb(0, 0, 0);
+        position: relative;
+    }
+
+    .section{
+        margin-top: 20px;
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+        color: white;
+    }
+    .card{
+        background: linear-gradient(180deg, rgba(40,65,74,1) 0%, rgba(24,38,55,1) 100%);
+        width: 100%;
+        padding: 20px;
+        margin-top: 15px;
+        border-radius: 10px;
+        line-height: 1.5;
+        height: max-content;
+        box-shadow: 0px 7px 39px -10px rgb(0, 0, 0);
+    }
+    
+    
+  }

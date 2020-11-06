@@ -1,0 +1,23 @@
+<div *ngIf="searchService.movies" style="margin-top: 20px;">
+    <h1 *ngIf="!searchService.movies">Search result</h1>
+    <div class="movieList">
+        <div *ngFor="let item of searchService.tvshows | slice:0:10" class="movieCard">
+          <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" routerLink="/moviedetails/{{item.id}}" alt="">
+          <h3>{{item.original_name}}</h3>
+          
+        </div>
+    </div>
+</div>
+
+
+<div [class.hidden]="searchService.tvshows.length > 0">
+  <h1>TV Shows</h1>
+  <div class="movieList">
+      <div *ngFor="let item of tvshows" class="movieCard">
+        <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" routerLink="/tvshowdetails/{{item.id}}" alt="">
+        <h3>{{item.original_name}}</h3>
+        
+      </div>
+  </div>
+  
+</div>

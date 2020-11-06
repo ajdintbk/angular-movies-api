@@ -1,0 +1,19 @@
+<h4 (click)="back()" style="color: white; cursor: pointer;">&#8249; BACK</h4>
+<div class="backdrop">
+    <div>
+        <h1 *ngIf="tvshow" class="movie_title">{{tvshow.original_name}}</h1>
+        <p *ngIf="tvshow">Number of episodes: <span>{{tvshow.number_of_episodes}}</span> | Number of seasons: <span>{{tvshow.number_of_seasons}}</span> | Aired <span>{{tvshow.first_air_date}}</span></p>
+    </div>
+    <img src="https://image.tmdb.org/t/p/original/{{tvshow.backdrop_path}}" style="width:100%;" alt="">
+</div>
+<div class="section">
+    <div class="card">
+        <h1>Overview</h1>
+        <p *ngIf="tvshow">{{tvshow.overview}}</p>
+    </div>
+
+    <div class="card">
+        <p>Popularity: {{tvshow.popularity}}</p>
+        <p [class.released]="tvshow.status == 'Ended'">{{tvshow.status}}</p>
+    </div>
+</div>

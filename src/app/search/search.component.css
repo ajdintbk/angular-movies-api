@@ -1,0 +1,17 @@
+.hidden{
+    display:none;
+}
+
+.searchField{
+    width: 96%;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+.searchField:focus{
+    width: 96%;
+    outline: none;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
