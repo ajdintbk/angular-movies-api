@@ -26,5 +26,9 @@ export class TvShowService {
         return this.http.get<TvShowDetails>(this.tvshowByIdUrl+id+"?"+this.api_key);
     }
 
+    getTvShowTrailer(id : number){
+        return this.http.get(this.tvshowByIdUrl+id+"/videos?"+this.api_key);
+    }
+
 
 }

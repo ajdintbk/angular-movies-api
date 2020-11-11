@@ -1,10 +1,11 @@
 <h4 (click)="back()" style="color: white; cursor: pointer;">&#8249; BACK</h4>
 <div class="backdrop">
-    <div>
+    <div class="movieInfo">
         <h1 *ngIf="tvshow" class="movie_title">{{tvshow.original_name}}</h1>
         <p *ngIf="tvshow">Number of episodes: <span>{{tvshow.number_of_episodes}}</span> | Number of seasons: <span>{{tvshow.number_of_seasons}}</span> | Aired <span>{{tvshow.first_air_date}}</span></p>
     </div>
-    <img src="https://image.tmdb.org/t/p/original/{{tvshow.backdrop_path}}" style="width:100%;" alt="">
+        <iframe width="100%" [src]="safeUrl" frameborder="0" ng-show="showvideo" allowfullscreen></iframe>
+    <img src="https://image.tmdb.org/t/p/original/{{tvshow.backdrop_path}}" *ngIf="tvshow" style="width:100%;" alt="">
 </div>
 <div class="section">
     <div class="card">
@@ -13,7 +14,8 @@
     </div>
 
     <div class="card">
-        <p>Popularity: {{tvshow.popularity}}</p>
-        <p [class.released]="tvshow.status == 'Ended'">{{tvshow.status}}</p>
+        <p *ngIf="tvshow">Popularity: {{tvshow.popularity}}</p>
+        <p *ngIf="tvshow">Number of episodes: <span>{{tvshow.number_of_episodes}}</span><br> Number of seasons: <span>{{tvshow.number_of_seasons}}</span> <br>Aired: <span>{{tvshow.first_air_date}}</span></p>
+        <p [class.released]="tvshow.status == 'Ended'" *ngIf="tvshow">{{tvshow.status}}</p>
     </div>
 </div>
