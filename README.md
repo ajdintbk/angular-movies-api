@@ -1,4 +1,4 @@
-# [Link](https://bit.ly/3pn37D7) to website: 
+# [Link](https://bit.ly/3pn37D7) to website
 
 # How to use application locally
 - Clone repository
